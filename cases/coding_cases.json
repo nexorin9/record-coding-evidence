@@ -1,0 +1,16 @@
+[
+  {"case_id":"C01","input":{"code":"J18"},"expect":"structure_invalid","basis":"domain/dictionaries/医保编码规则_ICD与药品.md 第 1 节（6 位结构）","confidence":1.0},
+  {"case_id":"C02","input":{"code":"J1890012"},"expect":"structure_invalid","basis":"domain/dictionaries/医保编码规则_ICD与药品.md 第 1 节（位数）","confidence":1.0},
+  {"case_id":"C03","input":{"code":"J1A900"},"expect":"structure_invalid","basis":"domain/dictionaries/医保编码规则_ICD与药品.md 第 1 节（字符集）","confidence":1.0},
+  {"case_id":"C04","input":{"code":"U07100"},"expect":"structure_valid","basis":"domain/dictionaries/医保编码规则_ICD与药品.md 第 1 节（U 章）","confidence":1.0},
+  {"case_id":"C05","input":{"code":"[00000"},"expect":"structure_invalid","basis":"domain/dictionaries/医保编码规则_ICD与药品.md 第 1 节（章节归属 A00–Z99 + U）","confidence":1.0},
+  {"case_id":"C06","input":{"code":"475100"},"expect":"dictionary_unavailable","basis":"domain/dictionaries/医保编码规则_ICD与药品.md 第 1 节（明细库需在线查询）","confidence":1.0},
+  {"case_id":"C07","input":{"code":"J18900","report_time":"20251201090000","admission_time":"20260101090000"},"expect":"report_stale","basis":"spec.md §6 报告陈旧确定性判定","confidence":1.0},
+  {"case_id":"C08","input":{"code":"J18900","evidence_refs":[]},"expect":"evidence_missing","basis":"spec.md §6 证据缺失确定性判定","confidence":1.0},
+  {"case_id":"C09","input":{"code":"J18900","evidence_refs":["E1"],"laterality":"","site":"右下肺"},"expect":"side_missing","basis":"spec.md §6 侧别缺失归因","confidence":0.9},
+  {"case_id":"C10","input":{"code":"J18900","evidence_refs":["E1"],"laterality":"右","site":""},"expect":"site_missing","basis":"spec.md §6 部位缺失归因","confidence":0.9},
+  {"case_id":"C11","input":{"code":"J18900","evidence_refs":["E1"],"report_text":"未见明显异常"},"expect":"negation","basis":"spec.md §6 否定与既往跨句识别","confidence":0.85},
+  {"case_id":"C12","input":{"code":"J18900","evidence_refs":["E1"],"report_text":"术前已诊断右下肺炎，术后复查"},"expect":"history","basis":"spec.md §6 否定与既往跨句识别","confidence":0.85},
+  {"case_id":"C13","input":{"code":"J18900","evidence_refs":["E1"],"confidence":0.42},"expect":"confidence_low","basis":"spec.md §6 置信度不足只提示不生成建议","confidence":1.0},
+  {"case_id":"C14","input":{"code":"J18900","report_time":"20260102090000","admission_time":"20260101090000"},"expect":"structure_valid","basis":"domain/dictionaries/医保编码规则_ICD与药品.md 第 1 节（合法码对照）","confidence":1.0}
+]

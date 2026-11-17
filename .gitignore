@@ -1,0 +1,47 @@
+# ---- 凭据与本地配置 ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---- 运行时数据与日志 ----
+data/*
+!data/README.md
+!data/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# ---- 构建产物 ----
+target/
+dist/
+build/
+coverage/
+out/
+
+# ---- 依赖目录 ----
+node_modules/
+venv/
+.venv/
+
+# ---- 缓存 ----
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.gradle/
+.idea/
+*.iml
+*.class
+
+# ---- 临时文件 ----
+*.log
+*.tmp
+*.temp
+*.swp
+.DS_Store
+
+# ---- round 元数据（不进入项目仓库） ----
+score.json
+
+# 注意：qrcode.jpg 与 docs/ 必须保留，不在忽略清单内。

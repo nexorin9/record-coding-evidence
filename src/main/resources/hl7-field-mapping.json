@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "description": "ORU^R01 角色语义映射；试点科室可覆盖此文件，映射缺失的角色一律标 unmapped",
+  "roles": {
+    "patient_id": "PID-3",
+    "visit_no": "PV1-19",
+    "service_id": "OBR-4",
+    "placer_order_no": "OBR-3",
+    "report_conclusion": "OBX-5",
+    "report_time": "OBX-14",
+    "report_status": "OBR-25",
+    "message_control_id": "MSH-10"
+  }
+}
